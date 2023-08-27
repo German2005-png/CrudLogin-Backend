@@ -10,7 +10,7 @@ AppMongodb()
 // app.use(AppMongodb)
 app.use(cors(
     {
-        origin: 'http://localhost:5173',
+        origin: 'https://crudlogin.netlify.app',
         allowedHeaders: "*",
         methods: ["GET", "POST", "PUT", "DELETE"]
     }
