@@ -12,7 +12,7 @@ app.use(cors(
     {
         origin: 'https://crudlogin.netlify.app',
         allowedHeaders: "*",
-        methods: ["GET", "POST", "PUT", "DELETE"]
+        methods: ["POST", "PUT", "DELETE"]
     }
 ));
 app.use((req, res, next) => {
