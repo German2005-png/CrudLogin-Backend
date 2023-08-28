@@ -17,6 +17,8 @@ app.use(cors(
 ));
 app.use((req, res, next) => {
     res.setHeader('Content-Security-Policy', "default-src 'self' font-src 'self' <URL>");
+    res.header('Access-Control-Allow-Origin', 'https://crudlogin.netlify.app');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next()
 })
 app.use(morgan("dev"));
