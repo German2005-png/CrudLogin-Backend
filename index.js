@@ -25,6 +25,9 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(router)
+app.get("/",(req,res)=>{
+    res.send("Hello")
+})
 //server
 app.listen(4000, ()=>{
     console.log("SERVER ON PORT 4000")
