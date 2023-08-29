@@ -12,11 +12,11 @@ app.use(cors(
     {
         origin: 'https://crudlogin.netlify.app',
         allowedHeaders: "*",
-        methods: ["POST", "PUT", "DELETE"]
+        methods: ["POST", "PUT", "DELETE"],
+        optionsSuccessStatus: 204
     }
 ));
 app.use((req, res, next) => {
-    res.setHeader('Content-Security-Policy', "default-src 'self' font-src 'self' <URL>");
     res.header('Access-Control-Allow-Origin', 'https://crudlogin.netlify.app');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next()
