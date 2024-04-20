@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 const AppMongodb = async() => {
     try {
-        await mongoose.connect('mongodb+srv://GermanDev:AnahiSofia@cloudtest.pxzr0pi.mongodb.net/CrudTest');
-        console.log('mongodb connecting!')
+        await mongoose.connect(process.env.KEY_DB);
     } catch (error) {
-        console.log('Err mongodb', error)
+        console.log('Err mongodb', error);
     }
 }
 export default AppMongodb;
